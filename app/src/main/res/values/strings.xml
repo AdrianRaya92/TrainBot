@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TrainBot</string>
+    <string name="generar">Generar Entrenemiento</string>
+    <string name="crear">Crear Entrenamiento</string>
+    <string name="atras">Atrás</string>
+</resources>
