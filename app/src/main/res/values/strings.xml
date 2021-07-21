@@ -2,5 +2,9 @@
     <string name="app_name">TrainBot</string>
     <string name="generar">Generar Entrenemiento</string>
     <string name="crear">Crear Entrenamiento</string>
+    <string name="desarrollador">Desarrollo</string>
     <string name="atras">Atrás</string>
+    <string name="texto1">DESARROLLADOR DE TRAINBOT</string>
+    <string name="texto2">ADRIÁN RAYA HERNÁNDEZ</string>
+    <string name="texto3">Desarrollador de aplicaciones móviles y Titulado en Actividades Físicas</string>
 </resources>

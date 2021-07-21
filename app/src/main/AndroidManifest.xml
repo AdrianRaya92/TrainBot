@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrainBot">
-        <activity android:name=".GeneradorTrainer"></activity>
+        <activity android:name=".Desarrollador"></activity>
+        <activity android:name=".GeneradorTrainer" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -22,6 +22,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //Botón para entrar en la Activity de información del desarrollador
+        btnDesarrollador.setOnClickListener{
+            val intent:Intent = Intent(this,Desarrollador::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }
