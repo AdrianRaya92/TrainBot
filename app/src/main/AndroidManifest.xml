@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrainBot">
-        <activity android:name=".TablaEjercicios"></activity>
+        <activity android:name=".Kcal"></activity>
+        <activity android:name=".TablaEjercicios" />
         <activity android:name=".Desarrollador" />
         <activity android:name=".GeneradorTrainer" />
         <activity android:name=".MainActivity">

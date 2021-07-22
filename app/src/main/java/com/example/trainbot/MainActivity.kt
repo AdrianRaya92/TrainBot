@@ -28,6 +28,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //Botón para entrar en la Activity de información Kcal
+        btnKcal.setOnClickListener{
+            val intent:Intent = Intent(this,Kcal::class.java)
+            startActivity(intent)
+        }
+
+        //Botón para salir de la app
+        btnSalir.setOnClickListener{
+            finish()
+            System.exit(0)
+        }
+
 
     }
 }

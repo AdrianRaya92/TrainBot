@@ -4,7 +4,22 @@
     <string name="crear">Crear Entrenamiento</string>
     <string name="desarrollador">Desarrollo</string>
     <string name="atras">Atrás</string>
+    <string name="kcal">Ver Kcal al día</string>
+    <string name="salir">Salir</string>
+
     <string name="texto1">DESARROLLADOR DE TRAINBOT</string>
     <string name="texto2">ADRIÁN RAYA HERNÁNDEZ</string>
     <string name="texto3">Desarrollador de aplicaciones móviles y Titulado en Actividades Físicas</string>
+
+    <string name="peso">Kg</string>
+    <string name="altura">cm</string>
+    <string name="edad">años</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="calculo1">Género</string>
+    <string name="calculo2">¿Cuántos años tienes?</string>
+    <string name="calculo3">¿Cuánto mides?</string>
+    <string name="calculo4">¿Cuánto pesas?</string>
+
+
 </resources>
