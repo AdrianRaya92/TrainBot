@@ -1,8 +1,11 @@
 package com.example.trainbot
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_desarrollador.*
 import kotlinx.android.synthetic.main.activity_kcal.*
@@ -32,15 +35,22 @@ class Kcal : AppCompatActivity() {
 
         //Botón para volver a la Main Activity
         btnCalcular.setOnClickListener{
+
+            hideKeyboard()
+
+
             //Si los textos no están vacíos
             if(!etEdad.getText().toString().isEmpty() && !etAltura.getText().toString().isEmpty()
                 && !etPeso.getText().toString().isEmpty() && (rbtnMujer.isChecked()==true
-                        || rbtnHombre.isChecked()==true)) {
+                        || rbtnHombre.isChecked()==true) && (rbNada.isChecked()==true || rb1dia.isChecked()==true
+                        || rb2dia.isChecked()==true || rb4dia.isChecked()==true || rb6dia.isChecked()==true
+                        || rbsiempre.isChecked()==true)) {
 
                 val edad: Int = etEdad.getText().toString().toInt()
                 val altura: Int = etAltura.getText().toString().toInt()
                 val peso: Int = etPeso.getText().toString().toInt()
                 var resultado: Double = 0.0
+                var resultado2: Double = 0.0
 
                 //TMB Mujer: (10x peso) + (6,25 x altura) – (5 x edad) – 161
                 if(rbtnMujer.isChecked()==true){
@@ -58,21 +68,35 @@ class Kcal : AppCompatActivity() {
                 Si hacer deporte regular seis días a la semana: TMB x 1,725
                 Si eres deportista de élite o entrenas muy intenso cada día: TMB x 1,9
                 */
+                if(rbNada.isChecked()==true){
+                    resultado2 = resultado*1.2
+                }
+                else if(rb1dia.isChecked()==true){
+                    resultado2 = resultado*1.3
+                }
+                else if(rb2dia.isChecked()==true){
+                    resultado2 = resultado*1.375
+                }
+                else if(rb4dia.isChecked()==true){
+                    resultado2 = resultado*1.55
+                }
+                else if(rb6dia.isChecked()==true){
+                    resultado2 = resultado*1.725
+                }
+                else if(rbsiempre.isChecked()==true){
+                    resultado2 = resultado*1.9
+                }
+
+                //Mostrar el texto del resultado en TextView
                 tvResultado.setText("TASA METABÓLICA BASAL= " + resultado.toInt()  +
-                        System.getProperty ("line.separator") +
                         System.getProperty ("line.separator") +
                         "KCAL DIARIAS SEGÚN EL EJERCICIO: " +
                         System.getProperty ("line.separator") +
-                        "Nada de ejercicio= " + (resultado*1.2).toInt() +" Kcal"+
+                        "Kcal para Adelgazar 1Kg a la semana= " + (resultado2-500).toInt() +" Kcal diarias"+
                         System.getProperty ("line.separator") +
-                        "Ejercicio 2 días a la semana= " + (resultado*1.375).toInt()+" Kcal"+
+                        "Kcal para Mantener= " + resultado2.toInt()+" Kcal diarias"+
                         System.getProperty ("line.separator") +
-                        "Ejercicio 4 días a la semana= " + (resultado*1.55).toInt() +" Kcal"+
-                        System.getProperty ("line.separator") +
-                        "Ejercicio 6 días a la semana= " + (resultado*1.725).toInt() +" Kcal"+
-                        System.getProperty ("line.separator") +
-                        "Ejercicio intenso todos los días= " + (resultado*1.9).toInt()+" Kcal")
-
+                        "Kcal para Engordar 1Kg a la semana= " + (resultado2+600).toInt() +" Kcal diarias")
             }
             //Si están vacíos
             else{
@@ -83,6 +107,17 @@ class Kcal : AppCompatActivity() {
 
     }
 
+    //Oculta el teclado
+    fun hideKeyboard(){
+      val view = this.currentFocus
+      if(view != null){
+          val hideMe = getSystemService( Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
+          hideMe.hideSoftInputFromWindow(view.windowToken,0)
+      }
+        //else
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+
+    }
 
 }

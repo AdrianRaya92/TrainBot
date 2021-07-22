@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TrainBot</string>
-    <string name="generar">Generar Entrenemiento</string>
+    <string name="generar">Generar Entrenamiento</string>
     <string name="crear">Crear Entrenamiento</string>
     <string name="desarrollador">Desarrollo</string>
     <string name="atras">Atrás</string>
@@ -21,6 +21,14 @@
     <string name="calculo2">¿Cuántos años tienes?</string>
     <string name="calculo3">¿Cuánto mides?</string>
     <string name="calculo4">¿Cuánto pesas?</string>
+
+    <string name="ejercicio">Ejercicio por semana</string>
+    <string name="Nada">Nada</string>
+    <string name="dia1">1 Día</string>
+    <string name="dia2">2 Días</string>
+    <string name="dia4">4 Días</string>
+    <string name="dia6">6 Días</string>
+    <string name="Todos">Siempre</string>
 
 
 </resources>
