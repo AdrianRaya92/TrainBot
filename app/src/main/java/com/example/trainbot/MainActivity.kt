@@ -36,8 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         //Botón para salir de la app
         btnSalir.setOnClickListener{
-            finish()
-            System.exit(0)
+            finishAffinity()
         }
 
 

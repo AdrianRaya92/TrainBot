@@ -20,6 +20,7 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="391dp"
         android:layout_height="235dp"
         android:layout_marginTop="44dp"
@@ -46,7 +47,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1" >
+                android:layout_weight="1">
 
                 <RadioButton
                     android:id="@+id/rbtnMujer"
@@ -88,7 +89,7 @@
                 android:ems="10"
                 android:hint="@string/edad"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -123,7 +124,7 @@
                 android:ems="10"
                 android:hint="@string/altura"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -159,7 +160,7 @@
                 android:ems="10"
                 android:hint="@string/peso"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -172,6 +173,28 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="326dp"
+        android:layout_height="258dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
+        app:layout_constraintVertical_bias="0.28" />
 
 
 </android.support.constraint.ConstraintLayout>
