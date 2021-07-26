@@ -45,26 +45,26 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButto4"
+                    android:id="@+id/rbCardio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Cardio" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/rbMantenimiento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Mantenimiento" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/rbDefinicion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/Definicion" />
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/rbVolumen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -96,19 +96,19 @@
                 android:translationX="20dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton20"
+                    android:id="@+id/rbBaja"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Baja" />
 
                 <RadioButton
-                    android:id="@+id/radioButton21"
+                    android:id="@+id/rbMedia"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Media" />
 
                 <RadioButton
-                    android:id="@+id/radioButton15"
+                    android:id="@+id/rbAlta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -140,13 +140,13 @@
                 android:translationX="20dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton7"
+                    android:id="@+id/rbGimnasio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Gimnasio" />
 
                 <RadioButton
-                    android:id="@+id/radioButton6"
+                    android:id="@+id/rbExterior"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Exterior" />
@@ -255,13 +255,13 @@
                 android:translationX="20dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rbMaterialSi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Si" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/rbMaterialNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
