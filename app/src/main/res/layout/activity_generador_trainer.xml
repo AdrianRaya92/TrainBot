@@ -35,11 +35,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/TipoEntrenamiento"
                 android:textColor="#2196F3"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationX="10dp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -84,12 +86,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Intensidad"
                 android:textColor="#2196F3"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationX="10dp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:translationX="20dp">
 
                 <RadioButton
                     android:id="@+id/radioButton20"
@@ -126,12 +130,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/LugarEntreno"
                 android:textColor="#2196F3"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationX="10dp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:translationX="20dp">
 
                 <RadioButton
                     android:id="@+id/radioButton7"
@@ -161,12 +167,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Cuerpo"
                 android:textColor="#2196F3"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationX="10dp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:translationX="20dp">
 
                 <RadioButton
                     android:id="@+id/radioButton8"
@@ -227,12 +235,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Materiales"
                 android:textColor="#2196F3"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationX="10dp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:translationX="20dp">
 
                 <RadioButton
                     android:id="@+id/radioButton"
