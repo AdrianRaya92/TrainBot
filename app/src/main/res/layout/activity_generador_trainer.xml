@@ -170,55 +170,65 @@
                 android:textStyle="bold"
                 android:translationX="10dp" />
 
-            <RadioGroup
+            <TableLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:translationX="20dp">
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radioButton8"
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Brazo" />
+                    android:layout_height="match_parent">
 
-                <RadioButton
-                    android:id="@+id/radioButton9"
+                    <CheckBox
+                        android:id="@+id/cbBrazo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Brazo" />
+
+                    <CheckBox
+                        android:id="@+id/cbPecho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Pecho" />
+
+                    <CheckBox
+                        android:id="@+id/cbEspalda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Espalda" />
+
+                    <CheckBox
+                        android:id="@+id/cbPiernas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Piernas" />
+                </TableRow>
+
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Pecho" />
+                    android:layout_height="match_parent">
 
-                <RadioButton
-                    android:id="@+id/radioButton10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Espalda" />
+                    <CheckBox
+                        android:id="@+id/cbGluteos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Gluteos" />
 
-                <RadioButton
-                    android:id="@+id/radioButton13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Piernas" />
+                    <CheckBox
+                        android:id="@+id/cbAbdomen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Abdomen" />
 
-                <RadioButton
-                    android:id="@+id/radioButton14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Gluteos" />
+                    <CheckBox
+                        android:id="@+id/cbTodo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Todo" />
+                </TableRow>
 
-                <RadioButton
-                    android:id="@+id/radioButton12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Abdomen" />
+            </TableLayout>
 
-                <RadioButton
-                    android:id="@+id/radioButton11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Todo" />
-
-            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout

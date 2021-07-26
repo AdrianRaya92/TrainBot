@@ -41,7 +41,7 @@
     <string name="Materiales">¿Tienes materiales? (Mancuernas, Gomas...)</string>
     <string name="Si">Si</string>
     <string name="No">No</string>
-    <string name="Cuerpo">Parte del cuerpo que quieres entrenar</string>
+    <string name="Cuerpo">Parte del cuerpo que quieres entrenar (máximo 2)</string>
     <string name="Brazo">Biceps/Triceps</string>
     <string name="Pecho">Pecho</string>
     <string name="Espalda">Espalda</string>
