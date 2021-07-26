@@ -87,6 +87,8 @@
 
                 <EditText
                     android:id="@+id/etEdad"
+                    android:digits="0123456789"
+                    android:maxLength="3"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -122,6 +124,8 @@
 
                 <EditText
                     android:id="@+id/etAltura"
+                    android:digits="0123456789"
+                    android:maxLength="3"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -158,6 +162,8 @@
 
                 <EditText
                     android:id="@+id/etPeso"
+                    android:digits="0123456789."
+                    android:maxLength="6"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

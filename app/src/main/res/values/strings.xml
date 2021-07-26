@@ -30,5 +30,29 @@
     <string name="dia6">6 Días</string>
     <string name="Todos">Siempre</string>
 
+    <string name="TipoEntrenamiento">Tipo de Entrenamiento</string>
+    <string name="Cardio">Cardio</string>
+    <string name="Mantenimiento">Mantenimiento</string>
+    <string name="Definicion">Definición</string>
+    <string name="Volumen"> Ganar Volumen</string>
+    <string name="LugarEntreno">¿Dónde vas a realizar el entrenamiento?</string>
+    <string name="Gimnasio">Gimnasio</string>
+    <string name="Exterior">Exterior</string>
+    <string name="Materiales">¿Tienes materiales? (Mancuernas, Gomas...)</string>
+    <string name="Si">Si</string>
+    <string name="No">No</string>
+    <string name="Cuerpo">Parte del cuerpo que quieres entrenar</string>
+    <string name="Brazo">Biceps/Triceps</string>
+    <string name="Pecho">Pecho</string>
+    <string name="Espalda">Espalda</string>
+    <string name="Piernas">Piernas</string>
+    <string name="Gluteos">Gluteos</string>
+    <string name="Abdomen">Abdomen</string>
+    <string name="Todo">Todo</string>
+    <string name="Intensidad">Intensidad del ejercicio</string>
+    <string name="Alta">Alta</string>
+    <string name="Media">Media</string>
+    <string name="Baja">Baja</string>
+
 
 </resources>

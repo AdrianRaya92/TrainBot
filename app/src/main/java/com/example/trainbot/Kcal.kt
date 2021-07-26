@@ -46,9 +46,9 @@ class Kcal : AppCompatActivity() {
                         || rb2dia.isChecked()==true || rb4dia.isChecked()==true || rb6dia.isChecked()==true
                         || rbsiempre.isChecked()==true)) {
 
-                val edad: Int = etEdad.getText().toString().toInt()
-                val altura: Int = etAltura.getText().toString().toInt()
-                val peso: Int = etPeso.getText().toString().toInt()
+                val edad: Double = etEdad.getText().toString().toDouble()
+                val altura: Double = etAltura.getText().toString().toDouble()
+                val peso: Double = etPeso.getText().toString().toDouble()
                 var resultado: Double = 0.0
                 var resultado2: Double = 0.0
 
