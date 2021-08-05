@@ -1,20 +1,22 @@
 package com.example.trainbot
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_generador_trainer.*
-import kotlinx.android.synthetic.main.activity_kcal.*
+import com.example.trainbot.databinding.ActivityGeneradorTrainerBinding
 
 
 class GeneradorTrainer : AppCompatActivity() {
+    private lateinit var binding: ActivityGeneradorTrainerBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_generador_trainer)
 
+        binding = ActivityGeneradorTrainerBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         //Botón para volver a la Main Activity
-        btnAtras.setOnClickListener{
+        binding.btnAtras.setOnClickListener{
             val intent: Intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
@@ -23,62 +25,62 @@ class GeneradorTrainer : AppCompatActivity() {
         //Comprobación de los Checkbox
 
         //CheckBox del cuerpo entero va a bloquear desmarcar los otros checkbox
-        cbTodo.setOnClickListener{
-            if (cbTodo.isChecked) {
-                cbBrazo.isEnabled = false
-                cbBrazo.isChecked = false
-                cbPecho.isEnabled = false
-                cbPecho.isChecked = false
-                cbEspalda.isEnabled = false
-                cbEspalda.isChecked = false
-                cbPiernas.isEnabled = false
-                cbPiernas.isChecked = false
-                cbGluteos.isEnabled = false
-                cbGluteos.isChecked = false
-                cbAbdomen.isEnabled = false
-                cbAbdomen.isChecked = false
+        binding.cbTodo.setOnClickListener{
+            if (binding.cbTodo.isChecked) {
+                binding.cbBrazo.isEnabled = false
+                binding.cbBrazo.isChecked = false
+                binding.cbPecho.isEnabled = false
+                binding.cbPecho.isChecked = false
+                binding.cbEspalda.isEnabled = false
+                binding.cbEspalda.isChecked = false
+                binding.cbPiernas.isEnabled = false
+                binding.cbPiernas.isChecked = false
+                binding.cbGluteos.isEnabled = false
+                binding.cbGluteos.isChecked = false
+                binding.cbAbdomen.isEnabled = false
+                binding.cbAbdomen.isChecked = false
             }
-            else if (!cbTodo.isChecked) {
-                cbBrazo.isEnabled = true
-                cbPecho.isEnabled = true
-                cbEspalda.isEnabled = true
-                cbPiernas.isEnabled = true
-                cbGluteos.isEnabled = true
-                cbAbdomen.isEnabled = true
+            else if (!binding.cbTodo.isChecked) {
+                binding.cbBrazo.isEnabled = true
+                binding.cbPecho.isEnabled = true
+                binding.cbEspalda.isEnabled = true
+                binding.cbPiernas.isEnabled = true
+                binding.cbGluteos.isEnabled = true
+                binding.cbAbdomen.isEnabled = true
             }
         }
 
         //CheckBox de 2 partes del cuerpo
-        cbBrazo.setOnClickListener{
+        binding.cbBrazo.setOnClickListener{
             ComprobarCheckBox()
         }
-        cbPecho.setOnClickListener{
+        binding.cbPecho.setOnClickListener{
             ComprobarCheckBox()
         }
-        cbEspalda.setOnClickListener{
+        binding.cbEspalda.setOnClickListener{
             ComprobarCheckBox()
         }
-        cbPiernas.setOnClickListener{
+        binding.cbPiernas.setOnClickListener{
             ComprobarCheckBox()
         }
-        cbGluteos.setOnClickListener{
+        binding.cbGluteos.setOnClickListener{
             ComprobarCheckBox()
         }
-        cbAbdomen.setOnClickListener{
+        binding.cbAbdomen.setOnClickListener{
             ComprobarCheckBox()
         }
 
 
         //Botón Generar la tabla de ejercicios
-        btnCrear.setOnClickListener{
+        binding.btnCrear.setOnClickListener{
 
             //Si los textos no están vacíos
-            if((rbCardio.isChecked || rbMantenimiento.isChecked || rbDefinicion.isChecked || rbVolumen.isChecked) &&
-                (rbBaja.isChecked || rbMedia.isChecked || rbAlta.isChecked) &&
-                (rbGimnasio.isChecked || rbExterior.isChecked) &&
-                (rbMaterialSi.isChecked || rbMaterialNo.isChecked) &&
-                (cbBrazo.isChecked || cbPecho.isChecked || cbEspalda.isChecked || cbPiernas.isChecked ||
-                        cbGluteos.isChecked || cbAbdomen.isChecked || cbTodo.isChecked)) {
+            if((binding.rbCardio.isChecked || binding.rbMantenimiento.isChecked || binding.rbDefinicion.isChecked || binding.rbVolumen.isChecked) &&
+                (binding.rbBaja.isChecked || binding.rbMedia.isChecked || binding.rbAlta.isChecked) &&
+                (binding.rbGimnasio.isChecked || binding.rbExterior.isChecked) &&
+                (binding.rbMaterialSi.isChecked || binding.rbMaterialNo.isChecked) &&
+                (binding.cbBrazo.isChecked || binding.cbPecho.isChecked || binding.cbEspalda.isChecked || binding.cbPiernas.isChecked ||
+                        binding.cbGluteos.isChecked || binding.cbAbdomen.isChecked || binding.cbTodo.isChecked)) {
 
                     val intent: Intent = Intent(this,Ejercicios::class.java)
                     startActivity(intent)
@@ -95,111 +97,111 @@ class GeneradorTrainer : AppCompatActivity() {
 
     private fun ComprobarCheckBox(){
         //Parte con brazos
-        if (cbBrazo.isChecked && cbPecho.isChecked) {
-            cbEspalda.isEnabled = false
-            cbPiernas.isEnabled = false
-            cbGluteos.isEnabled = false
-            cbAbdomen.isEnabled = false
+        if (binding.cbBrazo.isChecked && binding.cbPecho.isChecked) {
+            binding.cbEspalda.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbGluteos.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
             //Poner variable de doble eleccion
-        } else if (cbBrazo.isChecked && cbEspalda.isChecked) {
-            cbPecho.isEnabled = false
-            cbPiernas.isEnabled = false
-            cbGluteos.isEnabled = false
-            cbAbdomen.isEnabled = false
+        } else if (binding.cbBrazo.isChecked && binding.cbEspalda.isChecked) {
+            binding.cbPecho.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbGluteos.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
             //Poner variable de doble eleccion
-        } else if (cbBrazo.isChecked && cbPiernas.isChecked) {
-            cbPecho.isEnabled = false
-            cbEspalda.isEnabled = false
-            cbGluteos.isEnabled = false
-            cbAbdomen.isEnabled = false
+        } else if (binding.cbBrazo.isChecked && binding.cbPiernas.isChecked) {
+            binding.cbPecho.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbGluteos.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
             //Poner variable de doble eleccion
-        } else if (cbBrazo.isChecked && cbGluteos.isChecked) {
-            cbPecho.isEnabled = false
-            cbEspalda.isEnabled = false
-            cbPiernas.isEnabled = false
-            cbAbdomen.isEnabled = false
+        } else if (binding.cbBrazo.isChecked && binding.cbGluteos.isChecked) {
+            binding.cbPecho.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
             //Poner variable de doble eleccion
-        } else if (cbBrazo.isChecked && cbAbdomen.isChecked) {
-            cbPecho.isEnabled = false
-            cbEspalda.isEnabled = false
-            cbPiernas.isEnabled = false
-            cbGluteos.isEnabled = false
+        } else if (binding.cbBrazo.isChecked && binding.cbAbdomen.isChecked) {
+            binding.cbPecho.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbGluteos.isEnabled = false
             //Poner variable de doble eleccion
         }
         //Parte con pecho
-        else if (cbPecho.isChecked && cbEspalda.isChecked) {
-            cbBrazo.isEnabled = false
-            cbPiernas.isEnabled = false
-            cbGluteos.isEnabled = false
-            cbAbdomen.isEnabled = false
+        else if (binding.cbPecho.isChecked && binding.cbEspalda.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbGluteos.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
             //Poner variable de doble eleccion
-        } else if (cbPecho.isChecked && cbPiernas.isChecked) {
-            cbBrazo.isEnabled = false
-            cbEspalda.isEnabled = false
-            cbGluteos.isEnabled = false
-            cbAbdomen.isEnabled = false
+        } else if (binding.cbPecho.isChecked && binding.cbPiernas.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbGluteos.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
             //Poner variable de doble eleccion
-        } else if (cbPecho.isChecked && cbGluteos.isChecked) {
-            cbBrazo.isEnabled = false
-            cbEspalda.isEnabled = false
-            cbPiernas.isEnabled = false
-            cbAbdomen.isEnabled = false
+        } else if (binding.cbPecho.isChecked && binding.cbGluteos.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
             //Poner variable de doble eleccion
-        } else if (cbPecho.isChecked && cbAbdomen.isChecked) {
-            cbBrazo.isEnabled = false
-            cbEspalda.isEnabled = false
-            cbPiernas.isEnabled = false
-            cbGluteos.isEnabled = false
+        } else if (binding.cbPecho.isChecked && binding.cbAbdomen.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbGluteos.isEnabled = false
             //Poner variable de doble eleccion
         }
             //Parte con espalda
-            else if (cbEspalda.isChecked && cbPiernas.isChecked) {
-                cbBrazo.isEnabled = false
-                cbPecho.isEnabled = false
-                cbGluteos.isEnabled = false
-                cbAbdomen.isEnabled = false
+            else if (binding.cbEspalda.isChecked && binding.cbPiernas.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbPecho.isEnabled = false
+            binding.cbGluteos.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
                 //Poner variable de doble eleccion
-            } else if (cbEspalda.isChecked && cbGluteos.isChecked) {
-                cbBrazo.isEnabled = false
-                cbPecho.isEnabled = false
-                cbPiernas.isEnabled = false
-                cbAbdomen.isEnabled = false
+            } else if (binding.cbEspalda.isChecked && binding.cbGluteos.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbPecho.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
                 //Poner variable de doble eleccion
-            } else if (cbEspalda.isChecked && cbAbdomen.isChecked) {
-                cbBrazo.isEnabled = false
-                cbPecho.isEnabled = false
-                cbPiernas.isEnabled = false
-                cbGluteos.isEnabled = false
+            } else if (binding.cbEspalda.isChecked && binding.cbAbdomen.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbPecho.isEnabled = false
+            binding.cbPiernas.isEnabled = false
+            binding.cbGluteos.isEnabled = false
                 //Poner variable de doble eleccion
             }
             //Parte con piernas
-            else if (cbPiernas.isChecked && cbGluteos.isChecked) {
-                cbBrazo.isEnabled = false
-                cbPecho.isEnabled = false
-                cbEspalda.isEnabled = false
-                cbAbdomen.isEnabled = false
+            else if (binding.cbPiernas.isChecked && binding.cbGluteos.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbPecho.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbAbdomen.isEnabled = false
                 //Poner variable de doble eleccion
-            } else if (cbPiernas.isChecked && cbAbdomen.isChecked) {
-                cbBrazo.isEnabled = false
-                cbPecho.isEnabled = false
-                cbEspalda.isEnabled = false
-                cbGluteos.isEnabled = false
+            } else if (binding.cbPiernas.isChecked && binding.cbAbdomen.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbPecho.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbGluteos.isEnabled = false
                 //Poner variable de doble eleccion
             }
             //Parte con gluteos
-            else if (cbGluteos.isChecked && cbAbdomen.isChecked) {
-                cbBrazo.isEnabled = false
-                cbPecho.isEnabled = false
-                cbEspalda.isEnabled = false
-                cbPiernas.isEnabled = false
+            else if (binding.cbGluteos.isChecked && binding.cbAbdomen.isChecked) {
+            binding.cbBrazo.isEnabled = false
+            binding.cbPecho.isEnabled = false
+            binding.cbEspalda.isEnabled = false
+            binding.cbPiernas.isEnabled = false
                 //Poner variable de doble eleccion
             } else{
-                cbBrazo.isEnabled = true
-                cbPecho.isEnabled = true
-                cbEspalda.isEnabled = true
-                cbPiernas.isEnabled = true
-                cbGluteos.isEnabled = true
-                cbAbdomen.isEnabled = true
+            binding.cbBrazo.isEnabled = true
+            binding.cbPecho.isEnabled = true
+            binding.cbEspalda.isEnabled = true
+            binding.cbPiernas.isEnabled = true
+            binding.cbGluteos.isEnabled = true
+            binding.cbAbdomen.isEnabled = true
             }
 
 

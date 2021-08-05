@@ -3,6 +3,7 @@
     package="com.example.trainbot">
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,10 +12,9 @@
         android:theme="@style/Theme.TrainBot">
         <activity android:name=".Ejercicios"></activity>
         <activity android:name=".Kcal" />
-        <activity android:name=".TablaEjercicios" />
         <activity android:name=".Desarrollador" />
         <activity android:name=".GeneradorTrainer" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,5 +22,8 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

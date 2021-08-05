@@ -8,6 +8,21 @@
     <string name="salir">Salir</string>
     <string name="calcular">Calcular</string>
 
+    <string name="consulta">VER ENTRENAMIENTO</string>
+
+    <string name="calentamiento">CALENTAMIENTO</string>
+    <string name="partePrincipal">PARTE PRINCIPAL</string>
+    <string name="estiramientos">ESTIRAMIENTOS</string>
+
+    <string name="trainbotdescripcion">Aprieta el botón para ver la tabla de ejercicios que TrainBot ha generado para ti.</string>
+
+    <string name="ejercicio1">Ejercicio 1:</string>
+    <string name="ejercicio2">Ejercicio 2:</string>
+    <string name="ejercicio3">Ejercicio 3:</string>
+    <string name="ejercicio4">Ejercicio 4:</string>
+    <string name="ejercicio5">Ejercicio 5:</string>
+    <string name="ejercicio6">Ejercicio 6:</string>
+
     <string name="texto1">DESARROLLADOR DE TRAINBOT</string>
     <string name="texto2">ADRIÁN RAYA HERNÁNDEZ</string>
     <string name="texto3">Desarrollador de aplicaciones móviles y Titulado en Actividades Físicas</string>

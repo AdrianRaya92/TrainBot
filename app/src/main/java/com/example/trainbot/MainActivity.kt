@@ -1,9 +1,10 @@
 package com.example.trainbot
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.trainbot.databinding.ActivityMainBinding
+
 
 /**
  * TRAINBOT
@@ -12,30 +13,33 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         //Botón para entrar en la Activity para generar entrenamiento
-        btnGenerar.setOnClickListener{
+        binding.btnGenerar.setOnClickListener{
             val intent:Intent = Intent(this,GeneradorTrainer::class.java)
             startActivity(intent)
         }
 
         //Botón para entrar en la Activity de información del desarrollador
-        btnDesarrollador.setOnClickListener{
+        binding.btnDesarrollador.setOnClickListener{
             val intent:Intent = Intent(this,Desarrollador::class.java)
             startActivity(intent)
         }
 
         //Botón para entrar en la Activity de información Kcal
-        btnKcal.setOnClickListener{
+        binding.btnKcal.setOnClickListener{
             val intent:Intent = Intent(this,Kcal::class.java)
             startActivity(intent)
         }
 
         //Botón para salir de la app
-        btnSalir.setOnClickListener{
+        binding.btnSalir.setOnClickListener{
             finishAffinity()
         }
 

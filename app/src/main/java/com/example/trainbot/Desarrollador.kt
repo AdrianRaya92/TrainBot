@@ -1,17 +1,22 @@
 package com.example.trainbot
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_desarrollador.*
+import com.example.trainbot.databinding.ActivityDesarrolladorBinding
+
+
 
 class Desarrollador : AppCompatActivity() {
+    private lateinit var binding: ActivityDesarrolladorBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_desarrollador)
 
+        binding = ActivityDesarrolladorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         //Botón para volver a la Main Activity
-        btnAtras2.setOnClickListener{
+        binding.btnAtras2.setOnClickListener{
             val intent: Intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }

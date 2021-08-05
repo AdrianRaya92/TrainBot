@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -41,34 +41,38 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:translationX="20dp">
 
                 <RadioButton
                     android:id="@+id/rbCardio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Cardio" />
+                    android:text="@string/Cardio"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/rbMantenimiento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Mantenimiento" />
+                    android:text="@string/Mantenimiento"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/rbDefinicion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/Definicion" />
+                    android:text="@string/Definicion"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/rbVolumen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/Volumen" />
+                    android:text="@string/Volumen"
+                    android:textSize="12sp" />
             </RadioGroup>
         </LinearLayout>
 
@@ -277,4 +281,4 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

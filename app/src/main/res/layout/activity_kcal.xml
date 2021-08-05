@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,29 +19,29 @@
         <Button
             android:id="@+id/btnAtras3"
             android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:text="@string/atras"
             android:translationX="10dp"
             android:translationY="10dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="390dp"
-            android:layout_height="230dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:orientation="vertical"
             android:translationX="10dp"
             android:translationY="0dp">
 
             <LinearLayout
-                android:layout_width="409dp"
-                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView5"
-                    android:layout_width="300dp"
-                    android:layout_height="29dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/calculo1"
                     android:textColor="#00BCD4"
@@ -55,29 +55,31 @@
 
                     <RadioButton
                         android:id="@+id/rbtnMujer"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/mujer" />
+                        android:text="@string/mujer"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <RadioButton
                         android:id="@+id/rbtnHombre"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/hombre" />
+                        android:text="@string/hombre"
+                        tools:ignore="TouchTargetSizeCheck" />
                 </RadioGroup>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="200dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/calculo2"
@@ -87,15 +89,16 @@
 
                 <EditText
                     android:id="@+id/etEdad"
-                    android:digits="0123456789"
-                    android:maxLength="3"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789"
                     android:ems="10"
                     android:hint="@string/edad"
                     android:importantForAutofill="no"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -109,12 +112,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView7"
-                    android:layout_width="200dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/calculo3"
@@ -124,15 +127,16 @@
 
                 <EditText
                     android:id="@+id/etAltura"
-                    android:digits="0123456789"
-                    android:maxLength="3"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789"
                     android:ems="10"
                     android:hint="@string/altura"
                     android:importantForAutofill="no"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -152,7 +156,7 @@
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="200dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/calculo4"
@@ -162,15 +166,16 @@
 
                 <EditText
                     android:id="@+id/etPeso"
-                    android:digits="0123456789."
-                    android:maxLength="6"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789."
                     android:ems="10"
                     android:hint="@string/peso"
                     android:importantForAutofill="no"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxLength="6"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -186,7 +191,7 @@
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/ejercicio"
@@ -197,7 +202,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="192dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioGroup
@@ -213,40 +218,46 @@
                     android:id="@+id/rbNada"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/Nada" />
+                    android:text="@string/Nada"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/rb1dia"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/dia1" />
+                    android:text="@string/dia1"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/rb2dia"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/dia2" />
+                    android:text="@string/dia2"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/rb4dia"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/dia4" />
+                    android:text="@string/dia4"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/rb6dia"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/dia6" />
+                    android:text="@string/dia6"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/rbsiempre"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/Todos" />
+                    android:text="@string/Todos"
+                    tools:ignore="TouchTargetSizeCheck" />
             </RadioGroup>
 
             <Button
@@ -271,4 +282,4 @@
     </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

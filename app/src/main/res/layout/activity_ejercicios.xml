@@ -1,18 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ejercicios">
 
-    <Button
-        android:id="@+id/btAtras4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/atras"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btAtras4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/atras" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trainbotdescripcion"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/btConsulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/consulta" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvCalentamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calentamiento" />
+
+                <TextView
+                    android:id="@+id/tvTituloCalentamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivCalentamiento"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoCalentamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionCalentamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvEjercicios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/partePrincipal" />
+
+                <TextView
+                    android:id="@+id/tvEjercicio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ejercicio1" />
+
+                <TextView
+                    android:id="@+id/tvTituloEjercicio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivImagenEjercicio1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoEjercicio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionEjercicio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvEjercicio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ejercicio2" />
+
+                <TextView
+                    android:id="@+id/tvTituloEjercicio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivImagenEjercicio2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoEjercicio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionEjercicio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvEjercicio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ejercicio3" />
+
+                <TextView
+                    android:id="@+id/tvTituloEjercicio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivImagenEjercicio3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoEjercicio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionEjercicio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvEjercicio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ejercicio4" />
+
+                <TextView
+                    android:id="@+id/tvTituloEjercicio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivImagenEjercicio4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoEjercicio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionEjercicio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvEjercicio5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ejercicio5" />
+
+                <TextView
+                    android:id="@+id/tvTituloEjercicio5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivImagenEjercicio5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoEjercicio5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionEjercicio5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvEjercicio6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ejercicio6" />
+
+                <TextView
+                    android:id="@+id/tvTituloEjercicio6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivImagenEjercicio6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoEjercicio6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionEjercicio6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvEstiramientos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/estiramientos" />
+
+                <TextView
+                    android:id="@+id/tvTituloEstiramientos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivEstiramientos"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tvTiempoEstiramientos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionEstiramientos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
