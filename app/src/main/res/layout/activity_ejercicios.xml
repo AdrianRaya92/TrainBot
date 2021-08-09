@@ -46,10 +46,19 @@
                 android:orientation="vertical" >
 
                 <TextView
+                    android:id="@+id/tvPrueba"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
                     android:id="@+id/tvCalentamiento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/calentamiento" />
+                    android:text="@string/calentamiento"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvTituloCalentamiento"
@@ -75,13 +84,19 @@
                     android:id="@+id/tvEjercicios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/partePrincipal" />
+                    android:textAlignment="center"
+                    android:text="@string/partePrincipal"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvEjercicio1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ejercicio1" />
+                    android:text="@string/ejercicio1"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio1"
@@ -107,7 +122,9 @@
                     android:id="@+id/tvEjercicio2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ejercicio2" />
+                    android:text="@string/ejercicio2"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio2"
@@ -133,7 +150,9 @@
                     android:id="@+id/tvEjercicio3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ejercicio3" />
+                    android:text="@string/ejercicio3"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio3"
@@ -159,7 +178,9 @@
                     android:id="@+id/tvEjercicio4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ejercicio4" />
+                    android:text="@string/ejercicio4"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio4"
@@ -185,7 +206,9 @@
                     android:id="@+id/tvEjercicio5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ejercicio5" />
+                    android:text="@string/ejercicio5"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio5"
@@ -211,7 +234,9 @@
                     android:id="@+id/tvEjercicio6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ejercicio6" />
+                    android:text="@string/ejercicio6"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio6"
@@ -237,7 +262,11 @@
                     android:id="@+id/tvEstiramientos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/estiramientos" />
+                    android:textAlignment="center"
+                    android:text="@string/estiramientos"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvTituloEstiramientos"

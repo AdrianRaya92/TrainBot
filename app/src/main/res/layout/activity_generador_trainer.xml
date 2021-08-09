@@ -77,50 +77,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView333"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Intensidad"
-                android:textColor="#2196F3"
-                android:textStyle="bold"
-                android:translationX="10dp" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:translationX="20dp">
-
-                <RadioButton
-                    android:id="@+id/rbBaja"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Baja" />
-
-                <RadioButton
-                    android:id="@+id/rbMedia"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Media" />
-
-                <RadioButton
-                    android:id="@+id/rbAlta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/Alta" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
