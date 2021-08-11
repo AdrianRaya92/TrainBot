@@ -107,36 +107,15 @@ class GeneradorTrainer : AppCompatActivity() {
         }
         binding.rbMantenimiento.setOnClickListener{
             entrenamiento = 2
-            binding.cbBrazo.isEnabled = true
-            binding.cbPecho.isEnabled = true
-            binding.cbEspalda.isEnabled = true
-            binding.cbPiernas.isEnabled = true
-            binding.cbGluteos.isEnabled = true
-            binding.cbAbdomen.isEnabled = true
-            binding.cbTodo.isEnabled = true
-            binding.cbTodo.isChecked = false
+            eleccionEntrenamiento()
         }
         binding.rbDefinicion.setOnClickListener{
             entrenamiento = 3
-            binding.cbBrazo.isEnabled = true
-            binding.cbPecho.isEnabled = true
-            binding.cbEspalda.isEnabled = true
-            binding.cbPiernas.isEnabled = true
-            binding.cbGluteos.isEnabled = true
-            binding.cbAbdomen.isEnabled = true
-            binding.cbTodo.isEnabled = true
-            binding.cbTodo.isChecked = false
+            eleccionEntrenamiento()
         }
         binding.rbVolumen.setOnClickListener{
             entrenamiento = 4
-            binding.cbBrazo.isEnabled = true
-            binding.cbPecho.isEnabled = true
-            binding.cbEspalda.isEnabled = true
-            binding.cbPiernas.isEnabled = true
-            binding.cbGluteos.isEnabled = true
-            binding.cbAbdomen.isEnabled = true
-            binding.cbTodo.isEnabled = true
-            binding.cbTodo.isChecked = false
+            eleccionEntrenamiento()
         }
         //Lugar de entrenamiento
         binding.rbGimnasio.setOnClickListener{
@@ -357,6 +336,22 @@ class GeneradorTrainer : AppCompatActivity() {
             binding.cbGluteos.isEnabled = true
             binding.cbAbdomen.isEnabled = true
             }
+    }
+    private fun eleccionEntrenamiento(){
+        binding.cbBrazo.isEnabled = true
+        binding.cbBrazo.isChecked = false
+        binding.cbPecho.isEnabled = true
+        binding.cbPecho.isChecked = false
+        binding.cbEspalda.isEnabled = true
+        binding.cbEspalda.isChecked = false
+        binding.cbPiernas.isEnabled = true
+        binding.cbPiernas.isChecked = false
+        binding.cbGluteos.isEnabled = true
+        binding.cbGluteos.isChecked = false
+        binding.cbAbdomen.isEnabled = true
+        binding.cbAbdomen.isChecked = false
+        binding.cbTodo.isEnabled = true
+        binding.cbTodo.isChecked = false
     }
 
 }

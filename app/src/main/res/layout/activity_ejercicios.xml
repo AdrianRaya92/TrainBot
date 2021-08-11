@@ -26,6 +26,7 @@
             android:id="@+id/textView21"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
             android:text="@string/trainbotdescripcion"
             android:textAlignment="center"
             android:textColor="#000000" />
@@ -58,27 +59,40 @@
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginTop="25dp"/>
 
                 <TextView
                     android:id="@+id/tvTituloCalentamiento"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <ImageView
                     android:id="@+id/ivCalentamiento"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"/>
 
                 <TextView
                     android:id="@+id/tvTiempoCalentamiento"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvDescripcionCalentamiento"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvEjercicios"
@@ -88,7 +102,8 @@
                     android:text="@string/partePrincipal"
                     android:textColor="#000000"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_marginTop="25dp"/>
 
                 <TextView
                     android:id="@+id/tvEjercicio1"
@@ -96,27 +111,41 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ejercicio1"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <ImageView
                     android:id="@+id/ivImagenEjercicio1"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"/>
 
                 <TextView
                     android:id="@+id/tvTiempoEjercicio1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvDescripcionEjercicio1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvEjercicio2"
@@ -124,27 +153,41 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ejercicio2"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <ImageView
                     android:id="@+id/ivImagenEjercicio2"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"/>
 
                 <TextView
                     android:id="@+id/tvTiempoEjercicio2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvDescripcionEjercicio2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvEjercicio3"
@@ -152,27 +195,41 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ejercicio3"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <ImageView
                     android:id="@+id/ivImagenEjercicio3"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"/>
 
                 <TextView
                     android:id="@+id/tvTiempoEjercicio3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvDescripcionEjercicio3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvEjercicio4"
@@ -180,27 +237,41 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ejercicio4"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <ImageView
                     android:id="@+id/ivImagenEjercicio4"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"/>
 
                 <TextView
                     android:id="@+id/tvTiempoEjercicio4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvDescripcionEjercicio4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvEjercicio5"
@@ -208,27 +279,41 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ejercicio5"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <ImageView
                     android:id="@+id/ivImagenEjercicio5"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"/>
 
                 <TextView
                     android:id="@+id/tvTiempoEjercicio5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvDescripcionEjercicio5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvEjercicio6"
@@ -236,27 +321,41 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ejercicio6"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:id="@+id/tvTituloEjercicio6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <ImageView
                     android:id="@+id/ivImagenEjercicio6"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"/>
 
                 <TextView
                     android:id="@+id/tvTiempoEjercicio6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvDescripcionEjercicio6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:id="@+id/tvEstiramientos"
@@ -266,27 +365,25 @@
                     android:text="@string/estiramientos"
                     android:textColor="#000000"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/tvTituloEstiramientos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textStyle="bold"
+                    android:layout_marginTop="25dp"/>
 
                 <ImageView
                     android:id="@+id/ivEstiramientos"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp" />
-
-                <TextView
-                    android:id="@+id/tvTiempoEstiramientos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="150dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp" />
 
                 <TextView
                     android:id="@+id/tvDescripcionEstiramientos"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:textColor="#000000"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="15dp"/>
 
             </LinearLayout>
         </ScrollView>
