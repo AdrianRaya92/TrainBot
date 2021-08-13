@@ -119,9 +119,15 @@ class GeneradorTrainer : AppCompatActivity() {
         }
         //Lugar de entrenamiento
         binding.rbGimnasio.setOnClickListener{
+            binding.rbMaterialSi.isEnabled = true
+            binding.rbMaterialSi.isChecked = true
+            binding.rbMaterialNo.isEnabled = false
+            binding.rbMaterialNo.isChecked = false
+            material = true
             lugar = 1
         }
         binding.rbExterior.setOnClickListener{
+            binding.rbMaterialNo.isEnabled = true
             lugar = 2
         }
         //Materiales para el entrenamiento
@@ -210,6 +216,12 @@ class GeneradorTrainer : AppCompatActivity() {
         }
         else if (binding.cbBrazo.isChecked && !binding.cbPecho.isChecked && !binding.cbEspalda.isChecked
             && !binding.cbPiernas.isChecked && !binding.cbGluteos.isChecked && !binding.cbAbdomen.isChecked) {
+            binding.cbPecho.isEnabled = true
+            binding.cbEspalda.isEnabled = true
+            binding.cbPiernas.isEnabled = true
+            binding.cbGluteos.isEnabled = true
+            binding.cbAbdomen.isEnabled = true
+
             parteCuerpo1 = 1
             parteCuerpo2 = 1
         }
@@ -251,6 +263,13 @@ class GeneradorTrainer : AppCompatActivity() {
         }
         else if (binding.cbPecho.isChecked && !binding.cbBrazo.isChecked && !binding.cbEspalda.isChecked
             && !binding.cbPiernas.isChecked && !binding.cbGluteos.isChecked && !binding.cbAbdomen.isChecked) {
+
+            binding.cbBrazo.isEnabled = true
+            binding.cbEspalda.isEnabled = true
+            binding.cbPiernas.isEnabled = true
+            binding.cbGluteos.isEnabled = true
+            binding.cbAbdomen.isEnabled = true
+
             parteCuerpo1 = 2
             parteCuerpo2 = 2
         }
@@ -282,6 +301,13 @@ class GeneradorTrainer : AppCompatActivity() {
             }
         else if (binding.cbEspalda.isChecked && !binding.cbBrazo.isChecked && !binding.cbPecho.isChecked
             && !binding.cbPiernas.isChecked && !binding.cbGluteos.isChecked && !binding.cbAbdomen.isChecked) {
+
+            binding.cbPecho.isEnabled = true
+            binding.cbBrazo.isEnabled = true
+            binding.cbPiernas.isEnabled = true
+            binding.cbGluteos.isEnabled = true
+            binding.cbAbdomen.isEnabled = true
+
             parteCuerpo1 = 3
             parteCuerpo2 = 3
         }
@@ -305,6 +331,13 @@ class GeneradorTrainer : AppCompatActivity() {
             }
         else if (binding.cbPiernas.isChecked && !binding.cbBrazo.isChecked && !binding.cbEspalda.isChecked
             && !binding.cbPecho.isChecked && !binding.cbGluteos.isChecked && !binding.cbAbdomen.isChecked) {
+
+            binding.cbPecho.isEnabled = true
+            binding.cbBrazo.isEnabled = true
+            binding.cbEspalda.isEnabled = true
+            binding.cbGluteos.isEnabled = true
+            binding.cbAbdomen.isEnabled = true
+
             parteCuerpo1 = 4
             parteCuerpo2 = 4
         }
@@ -320,11 +353,25 @@ class GeneradorTrainer : AppCompatActivity() {
             }
         else if (binding.cbGluteos.isChecked && !binding.cbBrazo.isChecked && !binding.cbEspalda.isChecked
             && !binding.cbPiernas.isChecked && !binding.cbPecho.isChecked && !binding.cbAbdomen.isChecked) {
+
+            binding.cbPecho.isEnabled = true
+            binding.cbBrazo.isEnabled = true
+            binding.cbPiernas.isEnabled = true
+            binding.cbEspalda.isEnabled = true
+            binding.cbAbdomen.isEnabled = true
+
             parteCuerpo1 = 5
             parteCuerpo2 = 5
         }
         else if (binding.cbAbdomen.isChecked && !binding.cbBrazo.isChecked && !binding.cbEspalda.isChecked
             && !binding.cbPiernas.isChecked && !binding.cbGluteos.isChecked && !binding.cbPecho.isChecked) {
+
+            binding.cbPecho.isEnabled = true
+            binding.cbBrazo.isEnabled = true
+            binding.cbPiernas.isEnabled = true
+            binding.cbGluteos.isEnabled = true
+            binding.cbEspalda.isEnabled = true
+
             parteCuerpo1 = 6
             parteCuerpo2 = 6
         }

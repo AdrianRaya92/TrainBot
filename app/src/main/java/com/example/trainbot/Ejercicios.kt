@@ -1,12 +1,10 @@
 package com.example.trainbot
 
 import android.app.ProgressDialog
-import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trainbot.databinding.ActivityEjerciciosBinding
@@ -14,19 +12,11 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import java.io.File
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class Ejercicios : AppCompatActivity() {
 
     lateinit var binding: ActivityEjerciciosBinding
-    var listasEjercicios: ArrayList<String> = ArrayList()
-    var listasEjercicios2: ArrayList<String> = ArrayList()
-    var listasEjercicios3: ArrayList<String> = ArrayList()
-    var listasEjercicios4: ArrayList<String> = ArrayList()
-    var listasEjercicios5: ArrayList<String> = ArrayList()
-    var listasEjercicios6: ArrayList<String> = ArrayList()
-    var listasCalentamiento: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +31,6 @@ class Ejercicios : AppCompatActivity() {
         var numeroEjercicio5 = 4
         var numeroEjercicio6 = 5
 
-        var nAleatorio = Random()
         var numCalentamiento = 0
         var num = 0
         var num2 = 0
@@ -59,11 +48,7 @@ class Ejercicios : AppCompatActivity() {
         binding = ActivityEjerciciosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //Botón para entrar en la Activity para generar entrenamiento
-        //Se debe borrar las listas
         binding.btAtras4.setOnClickListener{
-            listasEjercicios.removeAt(0)
-
-
             val intent: Intent = Intent(this,GeneradorTrainer::class.java)
             startActivity(intent)
         }
@@ -76,6 +61,331 @@ class Ejercicios : AppCompatActivity() {
             val pruebaParteC1:Int = bundle.getInt("part1")
             val pruebaParteC2:Int = bundle.getInt("part2")
             val pruebaMaterial:Boolean = bundle.getBoolean("mater")
+
+            //CONDICIONES PARA MOSTRAR CALENTAMIENTO MEDIANTE RANDOM
+
+            if(pruebaMaterial==true){
+                numCalentamiento = (90..91).random()
+                codCalentamiento = numCalentamiento
+            }
+            else if(pruebaMaterial==false){
+                numCalentamiento = (91..92).random()
+                codCalentamiento = numCalentamiento
+            }
+
+            //CONDICIONES PARA MOSTRAR LOS EJERCICIOS MEDIANTE RANDOM
+
+            if(pruebaParteC1==pruebaParteC2 && pruebaParteC1!=7 && pruebaEntreno!=1) {
+                if (pruebaEntreno == 2) {
+                    var cuerpoNum: Int = pruebaParteC1 * 100
+                    if (pruebaLugar == 1) {
+                        num = (cuerpoNum..cuerpoNum + 1).random()
+                        num2 = (cuerpoNum + 2..cuerpoNum + 3).random()
+                        num3 = (cuerpoNum + 4..cuerpoNum + 5).random()
+                        num4 = (cuerpoNum + 6..cuerpoNum + 7).random()
+                        num5 = (cuerpoNum + 8..cuerpoNum + 9).random()
+                        num6 = cuerpoNum + 10
+                    } else if (pruebaLugar == 2) {
+                        if (pruebaMaterial == true) {
+                            num = (cuerpoNum + 20..cuerpoNum + 21).random()
+                            num2 = (cuerpoNum + 22..cuerpoNum + 23).random()
+                            num3 = (cuerpoNum + 24..cuerpoNum + 25).random()
+                            num4 = (cuerpoNum + 26..cuerpoNum + 27).random()
+                            num5 = (cuerpoNum + 28..cuerpoNum + 29).random()
+                            num6 = cuerpoNum + 30
+                        } else if (pruebaMaterial == false) {
+                            num = (cuerpoNum + 40..cuerpoNum + 41).random()
+                            num2 = (cuerpoNum + 42..cuerpoNum + 43).random()
+                            num3 = (cuerpoNum + 44..cuerpoNum + 45).random()
+                            num4 = (cuerpoNum + 46..cuerpoNum + 47).random()
+                            num5 = (cuerpoNum + 48..cuerpoNum + 49).random()
+                            num6 = cuerpoNum + 50
+                        }
+                    }
+                }
+                else if (pruebaEntreno == 3) {
+                    var cuerpoNum: Int = pruebaParteC1 * 1100
+                    if (pruebaLugar == 1) {
+                            num = (cuerpoNum..cuerpoNum + 1).random()
+                            num2 = (cuerpoNum + 2..cuerpoNum + 3).random()
+                            num3 = (cuerpoNum + 4..cuerpoNum + 5).random()
+                            num4 = (cuerpoNum + 6..cuerpoNum + 7).random()
+                            num5 = (cuerpoNum + 8..cuerpoNum + 9).random()
+                            num6 = cuerpoNum + 10
+                        } else if (pruebaLugar == 2) {
+                            if (pruebaMaterial == true) {
+                                num = (cuerpoNum + 20..cuerpoNum + 21).random()
+                                num2 = (cuerpoNum + 22..cuerpoNum + 23).random()
+                                num3 = (cuerpoNum + 24..cuerpoNum + 25).random()
+                                num4 = (cuerpoNum + 26..cuerpoNum + 27).random()
+                                num5 = (cuerpoNum + 28..cuerpoNum + 29).random()
+                                num6 = cuerpoNum + 30
+                            } else if (pruebaMaterial == false) {
+                                num = (cuerpoNum + 40..cuerpoNum + 41).random()
+                                num2 = (cuerpoNum + 42..cuerpoNum + 43).random()
+                                num3 = (cuerpoNum + 44..cuerpoNum + 45).random()
+                                num4 = (cuerpoNum + 46..cuerpoNum + 47).random()
+                                num5 = (cuerpoNum + 48..cuerpoNum + 49).random()
+                                num6 = cuerpoNum + 50
+                            }
+                        }
+                    }
+                else if (pruebaEntreno == 4) {
+                    var cuerpoNum: Int = pruebaParteC1 * 11100
+                        if (pruebaLugar == 1) {
+                            num = (cuerpoNum..cuerpoNum + 1).random()
+                            num2 = (cuerpoNum + 2..cuerpoNum + 3).random()
+                            num3 = (cuerpoNum + 4..cuerpoNum + 5).random()
+                            num4 = (cuerpoNum + 6..cuerpoNum + 7).random()
+                            num5 = (cuerpoNum + 8..cuerpoNum + 9).random()
+                            num6 = cuerpoNum + 10
+                        } else if (pruebaLugar == 2) {
+                            if (pruebaMaterial == true) {
+                                num = (cuerpoNum + 20..cuerpoNum + 21).random()
+                                num2 = (cuerpoNum + 22..cuerpoNum + 23).random()
+                                num3 = (cuerpoNum + 24..cuerpoNum + 25).random()
+                                num4 = (cuerpoNum + 26..cuerpoNum + 27).random()
+                                num5 = (cuerpoNum + 28..cuerpoNum + 29).random()
+                                num6 = cuerpoNum + 30
+                            } else if (pruebaMaterial == false) {
+                                num = (cuerpoNum + 40..cuerpoNum + 41).random()
+                                num2 = (cuerpoNum + 42..cuerpoNum + 43).random()
+                                num3 = (cuerpoNum + 44..cuerpoNum + 45).random()
+                                num4 = (cuerpoNum + 46..cuerpoNum + 47).random()
+                                num5 = (cuerpoNum + 48..cuerpoNum + 49).random()
+                                num6 = cuerpoNum + 50
+                            }
+                        }
+                    }
+                    numeroEjercicio = num
+                    numeroEjercicio2 = num2
+                    numeroEjercicio3 = num3
+                    numeroEjercicio4 = num4
+                    numeroEjercicio5 = num5
+                    numeroEjercicio6 = num6
+
+                }
+
+            else if(pruebaParteC1!=pruebaParteC2 && pruebaParteC1!=7 && pruebaEntreno!=1){
+                if (pruebaEntreno == 2) {
+                    var cuerpoNum: Int = pruebaParteC1 * 100
+                    var cuerpoNum2: Int = pruebaParteC2 * 100
+                    if (pruebaLugar == 1) {
+                        num = (cuerpoNum..cuerpoNum + 4).random()
+                        num2 = (cuerpoNum + 5..cuerpoNum + 7).random()
+                        num3 = (cuerpoNum + 8..cuerpoNum + 10).random()
+                        num4 = (cuerpoNum2..cuerpoNum2 + 4).random()
+                        num5 = (cuerpoNum2 + 5..cuerpoNum2 + 7).random()
+                        num6 = (cuerpoNum2 + 8..cuerpoNum2 + 10).random()
+                    } else if (pruebaLugar == 2) {
+                        if (pruebaMaterial == true) {
+                            num = (cuerpoNum + 20..cuerpoNum + 24).random()
+                            num2 = (cuerpoNum + 25..cuerpoNum + 27).random()
+                            num3 = (cuerpoNum + 28..cuerpoNum + 30).random()
+                            num4 = (cuerpoNum2 + 20..cuerpoNum2 + 24).random()
+                            num5 = (cuerpoNum2 + 25..cuerpoNum2 + 27).random()
+                            num6 = (cuerpoNum2 + 28..cuerpoNum2 + 30).random()
+                        } else if (pruebaMaterial == false) {
+                            num = (cuerpoNum + 40..cuerpoNum + 44).random()
+                            num2 = (cuerpoNum + 45..cuerpoNum + 47).random()
+                            num3 = (cuerpoNum + 48..cuerpoNum + 80).random()
+                            num4 = (cuerpoNum2 + 40..cuerpoNum2 + 44).random()
+                            num5 = (cuerpoNum2 + 45..cuerpoNum2 + 47).random()
+                            num6 = (cuerpoNum2 + 48..cuerpoNum2 + 50).random()
+                        }
+                    }
+                }
+                else if (pruebaEntreno == 3) {
+                    var cuerpoNum: Int = pruebaParteC1 * 1100
+                    var cuerpoNum2: Int = pruebaParteC2 * 1100
+                    if (pruebaLugar == 1) {
+                        num = (cuerpoNum..cuerpoNum + 4).random()
+                        num2 = (cuerpoNum + 5..cuerpoNum + 7).random()
+                        num3 = (cuerpoNum + 8..cuerpoNum + 10).random()
+                        num4 = (cuerpoNum2..cuerpoNum2 + 4).random()
+                        num5 = (cuerpoNum2 + 5..cuerpoNum2 + 7).random()
+                        num6 = (cuerpoNum2 + 8..cuerpoNum2 + 10).random()
+                    } else if (pruebaLugar == 2) {
+                        if (pruebaMaterial == true) {
+                            num = (cuerpoNum + 20..cuerpoNum + 24).random()
+                            num2 = (cuerpoNum + 25..cuerpoNum + 27).random()
+                            num3 = (cuerpoNum + 28..cuerpoNum + 30).random()
+                            num4 = (cuerpoNum2 + 20..cuerpoNum2 + 24).random()
+                            num5 = (cuerpoNum2 + 25..cuerpoNum2 + 27).random()
+                            num6 = (cuerpoNum2 + 28..cuerpoNum2 + 30).random()
+                        } else if (pruebaMaterial == false) {
+                            num = (cuerpoNum + 40..cuerpoNum + 44).random()
+                            num2 = (cuerpoNum + 45..cuerpoNum + 47).random()
+                            num3 = (cuerpoNum + 48..cuerpoNum + 80).random()
+                            num4 = (cuerpoNum2 + 40..cuerpoNum2 + 44).random()
+                            num5 = (cuerpoNum2 + 45..cuerpoNum2 + 47).random()
+                            num6 = (cuerpoNum2 + 48..cuerpoNum2 + 50).random()
+                        }
+                    }
+                }
+                else if (pruebaEntreno == 4) {
+                    var cuerpoNum: Int = pruebaParteC1 * 11100
+                    var cuerpoNum2: Int = pruebaParteC2 * 11100
+                    if (pruebaLugar == 1) {
+                        num = (cuerpoNum..cuerpoNum + 4).random()
+                        num2 = (cuerpoNum + 5..cuerpoNum + 7).random()
+                        num3 = (cuerpoNum + 8..cuerpoNum + 10).random()
+                        num4 = (cuerpoNum2..cuerpoNum2 + 4).random()
+                        num5 = (cuerpoNum2 + 5..cuerpoNum2 + 7).random()
+                        num6 = (cuerpoNum2 + 8..cuerpoNum2 + 10).random()
+                    } else if (pruebaLugar == 2) {
+                        if (pruebaMaterial == true) {
+                            num = (cuerpoNum + 20..cuerpoNum + 24).random()
+                            num2 = (cuerpoNum + 25..cuerpoNum + 27).random()
+                            num3 = (cuerpoNum + 28..cuerpoNum + 30).random()
+                            num4 = (cuerpoNum2 + 20..cuerpoNum2 + 24).random()
+                            num5 = (cuerpoNum2 + 25..cuerpoNum2 + 27).random()
+                            num6 = (cuerpoNum2 + 28..cuerpoNum2 + 30).random()
+                        } else if (pruebaMaterial == false) {
+                            num = (cuerpoNum + 40..cuerpoNum + 44).random()
+                            num2 = (cuerpoNum + 45..cuerpoNum + 47).random()
+                            num3 = (cuerpoNum + 48..cuerpoNum + 80).random()
+                            num4 = (cuerpoNum2 + 40..cuerpoNum2 + 44).random()
+                            num5 = (cuerpoNum2 + 45..cuerpoNum2 + 47).random()
+                            num6 = (cuerpoNum2 + 48..cuerpoNum2 + 50).random()
+                        }
+                    }
+                }
+                numeroEjercicio = num
+                numeroEjercicio2 = num2
+                numeroEjercicio3 = num3
+                numeroEjercicio4 = num4
+                numeroEjercicio5 = num5
+                numeroEjercicio6 = num6
+            }
+
+            else if(pruebaParteC1==7 && pruebaEntreno!=1){
+                if (pruebaEntreno == 2) {
+                    if (pruebaLugar == 1) {
+                        num = (100..110).random()
+                        num2 = (200..210).random()
+                        num3 = (300..310).random()
+                        num4 = (400..410).random()
+                        num5 = (500..510).random()
+                        num6 = (600..610).random()
+                    } else if (pruebaLugar == 2) {
+                        if (pruebaMaterial == true) {
+                            num = (120..130).random()
+                            num2 = (220..230).random()
+                            num3 = (320..330).random()
+                            num4 = (420..430).random()
+                            num5 = (520..530).random()
+                            num6 = (620..630).random()
+                        } else if (pruebaMaterial == false) {
+                            num = (140..150).random()
+                            num2 = (240..250).random()
+                            num3 = (340..350).random()
+                            num4 = (440..450).random()
+                            num5 = (540..550).random()
+                            num6 = (640..650).random()
+                        }
+                    }
+                }
+                else if (pruebaEntreno == 3) {
+                        if (pruebaLugar == 1) {
+                            num = (1100..1110).random()
+                            num2 = (2200..2210).random()
+                            num3 = (3300..3310).random()
+                            num4 = (4400..4410).random()
+                            num5 = (5500..5510).random()
+                            num6 = (6600..6610).random()
+                        } else if (pruebaLugar == 2) {
+                            if (pruebaMaterial == true) {
+                                num = (1120..1130).random()
+                                num2 = (2220..2230).random()
+                                num3 = (3320..3330).random()
+                                num4 = (4420..4430).random()
+                                num5 = (5520..5530).random()
+                                num6 = (6620..6630).random()
+                            } else if (pruebaMaterial == false) {
+                                num = (1140..1150).random()
+                                num2 = (2240..2250).random()
+                                num3 = (3340..3350).random()
+                                num4 = (4440..4450).random()
+                                num5 = (5540..5550).random()
+                                num6 = (6640..6650).random()
+                            }
+                        }
+                    }
+                else if (pruebaEntreno == 4) {
+                        if (pruebaLugar == 1) {
+                            num = (11100..11110).random()
+                            num2 = (22200..22210).random()
+                            num3 = (33300..33310).random()
+                            num4 = (44400..44410).random()
+                            num5 = (55500..55510).random()
+                            num6 = (66600..66610).random()
+                        } else if (pruebaLugar == 2) {
+                            if (pruebaMaterial == true) {
+                                num = (11120..11130).random()
+                                num2 = (22220..22230).random()
+                                num3 = (33320..33330).random()
+                                num4 = (44420..44430).random()
+                                num5 = (55520..55530).random()
+                                num6 = (66620..66630).random()
+                            } else if (pruebaMaterial == false) {
+                                num = (11140..11150).random()
+                                num2 = (22240..22250).random()
+                                num3 = (33340..33350).random()
+                                num4 = (44440..44450).random()
+                                num5 = (55540..55550).random()
+                                num6 = (66640..66650).random()
+                            }
+                        }
+                    }
+                    numeroEjercicio = num
+                    numeroEjercicio2 = num2
+                    numeroEjercicio3 = num3
+                    numeroEjercicio4 = num4
+                    numeroEjercicio5 = num5
+                    numeroEjercicio6 = num6
+                }
+
+            else if(pruebaEntreno==1){
+                if(pruebaLugar==1){
+                    num = (800..801).random()
+                    num2 = (802..803).random()
+                    num3 = (804..805).random()
+                    num4 = (806..807).random()
+                    num5 = (808..809).random()
+                    num6 = 810
+                }
+                else if(pruebaLugar==2){
+                    if(pruebaMaterial==true){
+                        num = (820..821).random()
+                        num2 = (822..823).random()
+                        num3 = (824..825).random()
+                        num4 = (826..827).random()
+                        num5 = (828..829).random()
+                        num6 = 830
+                    }
+                    else if(pruebaMaterial==false){
+                        num = (840..841).random()
+                        num2 = (842..843).random()
+                        num3 = (844..845).random()
+                        num4 = (846..847).random()
+                        num5 = (848..849).random()
+                        num6 = 850
+                    }
+                }
+                numeroEjercicio = num
+                numeroEjercicio2 = num2
+                numeroEjercicio3 = num3
+                numeroEjercicio4 = num4
+                numeroEjercicio5 = num5
+                numeroEjercicio6 = num6
+            }
+
+
+
+
+
+
 
             //Texto de pruebas
             if(pruebaMaterial==true){
@@ -99,310 +409,6 @@ class Ejercicios : AppCompatActivity() {
                         "ParteCuerpo2" + pruebaParteC2.toString() +
                         System.getProperty ("line.separator") +
                         "Material False")
-            }
-
-            //CALENTAMIENTO
-            //Base de datos con la misma parte del cuerpo
-            var listaCalentamiento: String
-            //Consultas para encontrar los ejercicios con dichos parametros
-            ejercicios.whereEqualTo("material", pruebaMaterial)
-                .whereEqualTo("partesEntrenamiento", 1)
-                .get()
-                .addOnSuccessListener{ result ->
-                    //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                    for(document in result){
-                        //Recoger la id del calentamiento e introducirlo en una función con un Array
-                        listaCalentamiento = "${document.id}"
-                        ListaCalentamientoRandom(listaCalentamiento)
-                    }
-                    //Creación de variable con el id del Calentamiento que queremos mostrar
-                    //Generar numero random a partir del contador de los datos que hay en la base de datos
-                    var contadorCalentamiento: Int=listasCalentamiento.count()
-                    numCalentamiento = nAleatorio.nextInt(contadorCalentamiento)
-
-                    codCalentamiento = listasCalentamiento.get(numCalentamiento).toInt()
-                }
-
-            //CONSULTAS BASE DE DATOS PARA LA CREACIÓN DE UNA LISTA Y GENERAR
-            //ALEATORIAMENTE EL EJERCICIO DESDE ESA LISTA
-            //ELECCIÓN DE UNA SOLA PARTE DEL CUERPO
-            if(pruebaParteC1 == pruebaParteC2 && pruebaParteC1!=7 && pruebaParteC2!=7 && pruebaEntreno!=1){
-                //Base de datos con la misma parte del cuerpo
-                var lista: String
-                //Consultas para encontrar los ejercicios con dichos parametros
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereIn("parteCuerpo",listOf(pruebaParteC1,pruebaParteC2))
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista = "${document.id}"
-                            ListaEjerciciosRandom(lista)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios1: Int=listasEjercicios.count()
-                        num = (0..1).random()
-                        num2 = (2..3).random()
-                        num3 = (4..5).random()
-                        num4 = (6..7).random()
-                        num5 = (8..9).random()
-                        num6 = (10..(contadorEjercicios1-1)).random()
-
-                        numeroEjercicio = listasEjercicios.get(num).toInt()
-                        numeroEjercicio2 = listasEjercicios.get(num2).toInt()
-                        numeroEjercicio3 = listasEjercicios.get(num3).toInt()
-                        numeroEjercicio4 = listasEjercicios.get(num4).toInt()
-                        numeroEjercicio5 = listasEjercicios.get(num5).toInt()
-                        numeroEjercicio6 = listasEjercicios.get(num6).toInt()
-                }
-            }
-
-            //ELECCION VARIAS PARTES DEL CUERPO
-            else if(pruebaParteC1 != pruebaParteC2 && pruebaParteC1!=7 && pruebaParteC2!=7 && pruebaEntreno!=1){
-                //Base de datos con la misma parte del cuerpo
-                var lista: String
-                //Consultas para encontrar los ejercicios con dichos parametros
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", pruebaParteC1)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista = "${document.id}"
-                            ListaEjerciciosRandom(lista)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios1: Int=listasEjercicios.count()
-
-                        num = (0..3).random()
-                        num2 = (4..7).random()
-                        num3 = (8..(contadorEjercicios1-1)).random()
-
-                        numeroEjercicio = listasEjercicios.get(num).toInt()
-                        numeroEjercicio2 = listasEjercicios.get(num2).toInt()
-                        numeroEjercicio3 = listasEjercicios.get(num3).toInt()
-
-                    }
-                //Base de datos con la misma parte del cuerpo
-                var lista2: String
-                //Consultas para encontrar los ejercicios con dichos parametros
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", pruebaParteC2)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista2 = "${document.id}"
-                            ListaEjercicios2Random(lista2)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios2: Int=listasEjercicios2.count()
-                        //var nAleatorio = Random()
-                        num4 = (0..3).random()
-                        num5 = (4..7).random()
-                        num6 = (8..(contadorEjercicios2-1)).random()
-
-                        numeroEjercicio4 = listasEjercicios2.get(num4).toInt()
-                        numeroEjercicio5 = listasEjercicios2.get(num5).toInt()
-                        numeroEjercicio6 = listasEjercicios2.get(num6).toInt()
-
-                    }
-            }
-            //ELECCION TODO EL CUERPO
-            else if(pruebaParteC1==7 && pruebaParteC2==7 && pruebaEntreno!=1){
-                //Base de datos con la misma parte del cuerpo
-                var lista: String
-                var lista2: String
-                var lista3: String
-                var lista4: String
-                var lista5: String
-                var lista6: String
-                //Consultas para encontrar los ejercicios de brazo
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", 1)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista = "${document.id}"
-                            ListaEjerciciosRandom(lista)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios1: Int=listasEjercicios.count()
-
-                        num = nAleatorio.nextInt(contadorEjercicios1)
-
-                        numeroEjercicio = listasEjercicios.get(num).toInt()
-                    }
-                //Base de datos con la misma parte del cuerpo
-                //Consultas para encontrar los ejercicios de pecho
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", 2)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista2 = "${document.id}"
-                            ListaEjercicios2Random(lista2)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios2: Int=listasEjercicios2.count()
-
-                        num2 = nAleatorio.nextInt(contadorEjercicios2)
-
-                        numeroEjercicio2 = listasEjercicios2.get(num2).toInt()
-                    }
-
-                //Consultas para encontrar los ejercicios de espalda
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", 3)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista3 = "${document.id}"
-                            ListaEjercicios3Random(lista3)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios3: Int=listasEjercicios3.count()
-
-                        num3 = nAleatorio.nextInt(contadorEjercicios3)
-
-                        numeroEjercicio3 = listasEjercicios3.get(num3).toInt()
-                    }
-
-                //Consultas para encontrar los ejercicios de piernas
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", 4)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista4 = "${document.id}"
-                            ListaEjercicios4Random(lista4)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios4: Int=listasEjercicios4.count()
-
-                        num4 = nAleatorio.nextInt(contadorEjercicios4)
-
-                        numeroEjercicio4 = listasEjercicios4.get(num4).toInt()
-                    }
-
-                //Consultas para encontrar los ejercicios de gluteos
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", 5)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista5 = "${document.id}"
-                            ListaEjercicios5Random(lista5)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios5: Int=listasEjercicios5.count()
-
-                        num5 = nAleatorio.nextInt(contadorEjercicios5)
-
-                        numeroEjercicio5 = listasEjercicios5.get(num5).toInt()
-                    }
-
-                //Consultas para encontrar los ejercicios de abdomen
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .whereEqualTo("parteCuerpo", 6)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista6 = "${document.id}"
-                            ListaEjercicios6Random(lista6)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios6: Int=listasEjercicios6.count()
-
-                        num6 = nAleatorio.nextInt(contadorEjercicios6)
-
-                        numeroEjercicio6 = listasEjercicios6.get(num6).toInt()
-                    }
-            }
-
-            else if(pruebaEntreno==1){
-                var lista: String
-                //Consultas para encontrar los ejercicios con dichos parametros
-                ejercicios.whereEqualTo("tipoEjercicios", pruebaEntreno)
-                    .whereEqualTo("lugar", pruebaLugar)
-                    .whereEqualTo("material", pruebaMaterial)
-                    .whereEqualTo("partesEntrenamiento", 2)
-                    .get()
-                    .addOnSuccessListener{ result ->
-                        //Bucle para encontrar todos los ejercicios que tengan los parámetros consultados
-                        for(document in result){
-                            //Recoger la id del ejercicio e introducirlo en una función con un Array
-                            lista = "${document.id}"
-                            ListaEjerciciosRandom(lista)
-                        }
-                        //Creación de variable con el id del Ejercicio que queremos mostrar
-                        //Generar numero random a partir del contador de los datos que hay en la base de datos
-                        var contadorEjercicios1: Int=listasEjercicios.count()
-                        num = (0..1).random()
-                        num2 = (2..3).random()
-                        num3 = (4..5).random()
-                        num4 = (6..7).random()
-                        num5 = (8..9).random()
-                        num6 = (10..(contadorEjercicios1-1)).random()
-
-                        numeroEjercicio = listasEjercicios.get(num).toInt()
-                        numeroEjercicio2 = listasEjercicios.get(num2).toInt()
-                        numeroEjercicio3 = listasEjercicios.get(num3).toInt()
-                        numeroEjercicio4 = listasEjercicios.get(num4).toInt()
-                        numeroEjercicio5 = listasEjercicios.get(num5).toInt()
-                        numeroEjercicio6 = listasEjercicios.get(num6).toInt()
-                    }
             }
 
             val handler = Handler()
@@ -647,26 +653,5 @@ class Ejercicios : AppCompatActivity() {
 
             }, 250)
         }
-    }
-    fun ListaEjerciciosRandom(lista:String){
-        listasEjercicios.add(lista)
-         }
-    fun ListaEjercicios2Random(lista2:String){
-        listasEjercicios2.add(lista2)
-    }
-    fun ListaEjercicios3Random(lista3:String){
-        listasEjercicios3.add(lista3)
-    }
-    fun ListaEjercicios4Random(lista4:String){
-        listasEjercicios4.add(lista4)
-    }
-    fun ListaEjercicios5Random(lista5:String){
-        listasEjercicios5.add(lista5)
-    }
-    fun ListaEjercicios6Random(lista6:String){
-        listasEjercicios6.add(lista6)
-    }
-    fun ListaCalentamientoRandom(lista:String){
-        listasCalentamiento.add(lista)
     }
 }
